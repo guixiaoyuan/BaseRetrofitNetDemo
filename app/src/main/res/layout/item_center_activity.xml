@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_center_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/img_center_content"
+        android:layout_width="545dp"
+        android:layout_height="237dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/iv_default_image_loading" />
+
+    <TextView
+        android:id="@+id/tv_center_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_center_content"
+        android:layout_marginTop="@dimen/normal_small_padding"
+        android:gravity="left"
+        android:text="我与农分期"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_activity_state"
+        android:layout_width="78dp"
+        android:layout_height="@dimen/tag_text_height"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_center_content"
+        android:layout_marginTop="@dimen/normal_small_padding"
+        android:background="@drawable/item_tag_view_bg"
+        android:gravity="center"
+        android:minWidth="@dimen/tag_width"
+        android:textColor="@drawable/tag_text_color"
+        android:textSize="14sp" />
+
+</RelativeLayout>
