@@ -8,6 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MenuTextStyle">
+        <item name="android:textSize">@dimen/key_value_size</item>
+        <item name="android:paddingRight">@dimen/normal_padding</item>
+
+    </style>
 
     <style name="CustomerProgressDialog">
         <item name="android:background">@android:color/transparent</item>

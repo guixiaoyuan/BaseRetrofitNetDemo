@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
  * @version 1.0, 2017/12/29
  * @since [BaseRetrofitNetDemo/V1.0]
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -50,23 +50,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setActionBar("活动中心", true);
+        setActionBar("活动中心", false);
         getData();
-    }
-
-    protected void setActionBar(String title, boolean displayHomeAsUpEnabled) {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setTitle(title);
-            actionBar.setDisplayHomeAsUpEnabled(displayHomeAsUpEnabled);
-            actionBar.setBackgroundDrawable(getBarColorDrawable());
-            actionBar.setElevation(0);
-        }
-    }
-
-    private Drawable getBarColorDrawable() {
-        ColorDrawable drawable = new ColorDrawable(getResources().getColor(R.color.main_blue));
-        return drawable;
     }
 
     private void initView() {
@@ -78,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.putExtra(CenterConstants.ACTIVITY_URL, url);
                 intent.putExtra(CenterConstants.ACTIVITY_NAME, name);
-                //intent.setClass(MainActivity.this, CenterWebViewActivity.class);
+                intent.setClass(MainActivity.this, CenterWebViewActivity.class);
                 startActivity(intent);
             }
         });
